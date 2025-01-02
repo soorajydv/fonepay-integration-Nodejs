@@ -1,12 +1,17 @@
 {
   "name": "fonepay",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A Node.js package to integrate Fonepay payment gateway",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["fonepay", "payment", "integration", "nodejs"],
+  "keywords": [
+    "fonepay",
+    "payment",
+    "integration",
+    "nodejs"
+  ],
   "author": "Ydv Sooraj",
   "license": "ISC",
   "dependencies": {
