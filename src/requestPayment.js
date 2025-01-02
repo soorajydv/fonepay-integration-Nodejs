@@ -7,11 +7,10 @@ function generatePaymentUrl(PID, PRN, AMT, R1, R2, secretKey) {
     const year = today.getFullYear(); // Get year
     const date = `${month}/${day}/${year}`; // Format as MM/DD/YYYY
 
-    const PID = PID; // Example Merchant Code
     const MD = 'P'; // Payment Mode
     const CRN = 'NPR'; // Default currency
     const DT = date;
-    const RU = `http://payment/verify`; // Callback URL
+    const RU = `http://fonepay/payment/verify`; // Callback URL
 
     // Concatenate fields as per Fonepay documentation
     const concatenatedString = `${PID},${MD},${PRN},${AMT},${CRN},${DT},${R1},${R2},${RU}`;
