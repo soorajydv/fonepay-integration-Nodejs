@@ -11,14 +11,14 @@ function generatePaymentUrl(PRN, AMT, R1, R2, secretKey) {
     const MD = 'P'; // Payment Mode
     const CRN = 'NPR'; // Default currency
     const DT = date;
-    const RU = `http://localhost:${process.env.PORT || 3000}/payment/verify`; // Callback URL
+    const RU = `http://payment/verify`; // Callback URL
 
     // Concatenate fields as per Fonepay documentation
     const concatenatedString = `${PID},${MD},${PRN},${AMT},${CRN},${DT},${R1},${R2},${RU}`;
 
     // Generate DV (Data Validation Hash)
     const DV = crypto
-        .createHmac('sha512', process.env.FONEPAY_SHARED_SECRET)
+        .createHmac('sha512', secretKey)
         .update(concatenatedString, 'utf-8')
         .digest('hex');
 
