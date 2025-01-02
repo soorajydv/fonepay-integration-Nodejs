@@ -7,7 +7,7 @@ function generatePaymentUrl(PRN, AMT, R1, R2) {
     const year = today.getFullYear(); // Get year
     const date = `${month}/${day}/${year}`; // Format as MM/DD/YYYY
 
-    const PID = NBQM; // Example Merchant Code
+    const PID = "NBQM"; // Example Merchant Code
     const MD = 'P'; // Payment Mode
     const CRN = 'NPR'; // Default currency
     const DT = date;
