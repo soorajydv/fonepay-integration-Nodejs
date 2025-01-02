@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 
-const fonepayRouter = require('./routes/payment');
+const fonepayRouter = require('./src/routes/payment');
 
 app.use(express.json());
 
