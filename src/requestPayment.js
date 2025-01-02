@@ -1,4 +1,3 @@
-require('dotenv').config();
 const crypto = require('crypto');
 
 function generatePaymentUrl(PRN, AMT, R1, R2) {

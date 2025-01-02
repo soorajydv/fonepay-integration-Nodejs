@@ -1,13 +1,7 @@
-const express = require('express');
-const app = express();
-require('dotenv').config();
+const { generatePaymentUrl } = require('./src/requestPayment');
+const { verifyResponse } = require('./src/verifyPayment');
 
-const fonepayRouter = require('./src/routes/payment');
-
-app.use(express.json());
-
-// Fonepay Payment route
-app.use('/', fonepayRouter);
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+module.exports = {
+    generatePaymentUrl,
+    verifyResponse,
+};
