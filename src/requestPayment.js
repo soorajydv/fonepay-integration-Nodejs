@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-function generatePaymentUrl(PRN, AMT, R1, R2) {
+function generatePaymentUrl(PRN, AMT, R1, R2, secretKey) {
     const today = new Date();
     const month = String(today.getMonth() + 1).padStart(2, '0'); // Get month
     const day = String(today.getDate()).padStart(2, '0'); // Get day
