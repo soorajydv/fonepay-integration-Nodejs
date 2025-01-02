@@ -1,13 +1,13 @@
 const crypto = require('crypto');
 
-function generatePaymentUrl(PRN, AMT, R1, R2, secretKey) {
+function generatePaymentUrl(PRN, AMT, R1, R2) {
     const today = new Date();
     const month = String(today.getMonth() + 1).padStart(2, '0'); // Get month
     const day = String(today.getDate()).padStart(2, '0'); // Get day
     const year = today.getFullYear(); // Get year
     const date = `${month}/${day}/${year}`; // Format as MM/DD/YYYY
 
-    const PID = secretKey; // Example Merchant Code
+    const PID = NBQM; // Example Merchant Code
     const MD = 'P'; // Payment Mode
     const CRN = 'NPR'; // Default currency
     const DT = date;
